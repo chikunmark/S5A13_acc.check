@@ -6,6 +6,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // 設定連線到 mongoDB
+mongoose.set('strictQuery', false)
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 
