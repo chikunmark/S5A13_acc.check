@@ -39,7 +39,7 @@ app.post('/', (req, res) => {
       // console.log(acc[0])
       // console.log('布林結果如下')
       // console.log(Boolean(acc[0]))
-      // console.log(acc !== []) // 這個等號有問題，只要是陣列 acc 就會一直不等於 []
+      // console.log(acc !== []) // 這個等號有問題 (因 JS 判定方法)，只要是陣列，acc 就會一直不等於 []
       if (Boolean(acc[0])) {
         dNone = 'd-none'
         return res.redirect('/welcome')
